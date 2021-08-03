@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { useHistory,Link } from "react-router-dom";
 import FirebaseContext from "../context/firbase";
 import * as ROUTES from "../constants/routes";
-function LoginScreen() {
+function RegisterScreen() {
   const history = useHistory();
   const { firebase } = useContext(FirebaseContext);
   const [emailAddress, setEmailAddress] = useState("");
@@ -63,4 +63,4 @@ function LoginScreen() {
   );
 }
 
-export default LoginScreen;
+export default RegisterScreen;
