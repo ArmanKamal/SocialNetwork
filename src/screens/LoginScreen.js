@@ -26,11 +26,11 @@ function LoginScreen() {
   }
 
   useEffect(() => {
-    document.title = "Login - Vibegramn";
+    document.title = "Login - Instify";
   }, []);
 
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-gray-300">
+    <div className="w-full h-screen flex items-center justify-center bg-indigo-400">
       
         <form className="w-full md:w-1/3 bg-white rounded-lg" onSubmit={handleLogin} method="POST">
             <div className="flex font-bold justify-center mt-6 mb-3 ">
