@@ -48,6 +48,7 @@ function RegisterScreen() {
         history.push(ROUTES.DASHBOARD)
 
       } catch (error) {
+        setUsername("")
         setFullName("");
         setEmailAddress("");
         setPassword("");
@@ -153,7 +154,7 @@ function RegisterScreen() {
           </div>
           <p className="text-xs text-gray-500 float-right mb-4">
             Already have an account?
-            <Link to="/reigster" className="font-bold">
+            <Link to={ROUTES.LOGIN} className="font-bold">
               Login
             </Link>
           </p>

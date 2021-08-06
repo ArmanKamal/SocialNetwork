@@ -54,7 +54,7 @@ function LoginScreen() {
                     </div>
                 </div>
                 <p className="text-xs text-gray-500 float-right mb-4">
-                  Dont have an account?<Link to="/reigster" className="font-bold">Register</Link>
+                  Dont have an account?<Link to={ROUTES.REGISTER} className="font-bold">Register</Link>
                 </p>
                 <button type="submit"  disabled={isInvalid} className={`w-full py-2 rounded-full bg-green-600 text-gray-100  focus:outline-none ${isInvalid && 'opacity-50'}`}>Login</button>
               </div>
