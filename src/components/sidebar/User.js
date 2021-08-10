@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Sidebar() {
+function User() {
     return (
         <div>
-            I am Sidebar
+            I am User
         </div>
     )
 }
 
-export default Sidebar
+export default User
