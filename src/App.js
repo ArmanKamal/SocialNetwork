@@ -1,4 +1,5 @@
 import { Suspense,lazy } from 'react';
+import React from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import * as ROUTES from './constants/routes'
 import UserContext from './context/user';

@@ -5,11 +5,12 @@ import User from './User'
 
 
 function Sidebar() {
-    const x = useUser()
+    const {user} = useUser()
+ 
     return (
         <div>
-            <User />
-            <Suggestions />
+            <User username={user.username} fullName={user.fullName} />
+            <Suggestions userId={user.userId} />
         </div>
     )
 }

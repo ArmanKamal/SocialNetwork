@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import FirebaseContext from "../context/firbase";
 import { Link } from "react-router-dom";
 import UserContext from "../context/user";
@@ -9,12 +9,12 @@ function Header() {
   const { user } = useContext(UserContext);
 
   return (
-    <nav class="bg-gray-800">
-      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div class="relative flex items-center justify-between h-16">
-          <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+    <nav className="bg-gray-800">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="relative flex items-center justify-between h-16">
+          <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div
-              class="flex-shrink-0 flex items-center"
+              className="flex-shrink-0 flex items-center"
               aria-label="Instify Logo"
             >
               <Link to={ROUTES.DASHBOARD}>
@@ -27,9 +27,9 @@ function Header() {
             </div>
           </div>
           {/* Right Side  */}
-          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             {user ? (
-              <>
+              <React.Fragment>
                 <button
                   type="button"
                   title="Sign Out"
@@ -43,15 +43,15 @@ function Header() {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
+                    className="h-6 w-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                     strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
                     />
                   </svg>
@@ -64,9 +64,9 @@ function Header() {
                     />
                   </Link>
                 </div>
-              </>
+              </React.Fragment>
             ) : (
-              <>
+              <React.Fragment>
                 <Link to={ROUTES.LOGIN}>
                   <button type="button" className="bg-indigo-500 rounded font-bold text-white w-20 h-8">Log In</button>
                 </Link>
@@ -74,7 +74,7 @@ function Header() {
                 <Link to={ROUTES.REGISTER}>
                   <button type="button"  className="bg-yellow-400 rounded font-bold ml-4 w-20 h-8">Register</button>
                 </Link>
-              </>
+              </React.Fragment>
             )}
           </div>
         </div>
