@@ -72,7 +72,7 @@ function Header() {
                 <button
                   type="button"
                   title="Sign Out"
-                  className="text-white"
+                  className="text-black-300 dark:text-white"
                   onClick={() => firebase.auth().signOut()}
                   onKeyDown={(event) => {
                     if (event.key === "Enter") {

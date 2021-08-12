@@ -1,9 +1,25 @@
 import React,{useState,useEffect} from 'react'
 import PropTypes from 'prop-types'
 import Skeleton from 'react-loading-skeleton'
+import { getUserSuggestedProfile } from '../../services/firebase'
 
-export default function Suggestions({userId}) {
-    const [profiles, setProfiles] = useState('')
+export default function Suggestions({userId,following}) {
+    const [profiles, setProfiles] = useState(null)
+
+    useEffect(() => {
+        
+        async function suggestedProfile(){
+            const response = await getUserSuggestedProfile(userId,following)
+            setProfiles(response)
+        }
+        if(userId){
+            suggestedProfile();
+        }
+
+    }, [userId])
+
+    
+
 
     return !profiles?(
         <Skeleton count={1} height={170}  className="mt-5"/>
@@ -21,5 +37,6 @@ export default function Suggestions({userId}) {
 
 
 Suggestions.propTypes = {
-    userId: PropTypes.string
+    userId: PropTypes.string,
+    following: PropTypes.array
 }

@@ -15,8 +15,8 @@ export default function User({username, fullName}){
                 <img className="rounded-full w-16 flex mr-3" src={`/images/avatars/${username}.jpg`} />
             </div>
             <div className="col-span-3">
-                <p className="font-bold text-sm">{username}</p>
-                <p className="text-sm">{fullName}</p>
+                <p className="font-bold text-sm dark:text-white">{username}</p>
+                <p className="text-sm dark:text-white">{fullName}</p>
             </div>
         </Link>
     )
