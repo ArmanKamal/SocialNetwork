@@ -28,3 +28,19 @@ export async function getUserByUserId(userId){
    
     return user
 }
+
+export async function getUserSuggestedProfile(userId){
+    const result = await firebase.
+                    firestore()
+                    .collection('users')
+                    .where('userId', '!=',userId)
+                    .get()
+
+    console.log(result)
+    const suggestedUser = result.docs.map((item) => ({
+        ...item.data(),
+        docId:item.id
+    }))
+
+    return suggestedUser
+}
