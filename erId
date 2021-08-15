@@ -1,0 +1,15 @@
+[33m4ba8779[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Added SuggestedProfile Firebase service
+[33m736449d[m Added Dark Mode
+[33mcbd842a[m Added Sidebar(User) Profile
+[33mefd5a87[m Added Use User hook
+[33m00c9774[m More Header Tailwind Added
+[33m1416041[m Added Firebase Auth listener, Header Component
+[33md38c5c9[m Register User Added
+[33m38678de[m Login Page functionality Done
+[33m28bac6e[m Login Page Design added
+[33m2149e64[m Merge branch 'main' of https://github.com/ArmanKamal/SocialNetwork
+[33m4ee770d[m Tailwindcss Added
+[33m2343498[m Delete .env
+[33m637fc68[m firebase setup
+[33m9ca0379[m Added Folder Structure
+[33m577ebd0[m Initialize project using Create React App
