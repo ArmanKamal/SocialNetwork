@@ -22,8 +22,8 @@ export default function Suggestions({ userId, following,loggedInUserDocId }) {
   ) : profiles.length > 0 ? (
     <div className="rounded flex flex-col">
       <div className="text-sm flex items-center align-items justify-between mb-2">
-        <p className="font-bold text-gray-500 dark:text-white">
-          Suggestions For You
+        <p className="font-bold text-gray-500 dark:text-white mb-2">
+          People You May know
         </p>
       </div>
       <div className="grid gap-5">

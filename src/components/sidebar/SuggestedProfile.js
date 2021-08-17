@@ -9,14 +9,15 @@ export default function SuggestedProfile({profileId, username, spDocId, userId,l
      const handleFollowedUser = async () => {
         setFollowed(true)
 
-        // Function for 
+        // Update the LoggedInUser's Doc
         await updateLoggedInUserFollowing(loggedInUserDocId, profileId,false)
 
-        await updateFollowedUsersFollowers(spDocId, userId)
+        // Update the SuggestedProfile's Doc
+        await updateFollowedUsersFollowers(spDocId, userId,false)
     }
     return !followed?(
         <div className="flex items-center align-items justify-between">
-           <div className="flex items-center justify-between">
+           <div className="flex justify-between align-items items-center">
                 <img className="rounded-full w-8 flex mr-3" src={'/images/avatars/kevin.jpg'} />
                 <Link to={`/p/${username}`}>
                     <p className="font-bold text-sm dark:text-white">{username}</p>
