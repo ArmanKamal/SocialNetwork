@@ -3,6 +3,7 @@ import {Timeline,Header,Sidebar} from '../components/index'
 function Dashboard() {
     
     useEffect(() => {
+        
         document.title = 'Instify'
        
     }, [])

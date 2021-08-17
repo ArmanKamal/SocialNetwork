@@ -99,7 +99,7 @@ function Header() {
                   <Link to={"/profile/${user.displayName}"}>
                     <img
                       className="rounded-full h-8 w-8 flex"
-                      src={`/images/avatars/${user.displayName}.jpg`}
+                      src={`/images/avatars/${user.displayName}.png`}
                       alt={`${user.displayName} profile`}
                     />
                   </Link>
